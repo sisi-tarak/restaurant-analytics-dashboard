@@ -1,0 +1,111 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║         🍽️  Interactive Restaurant Analytics Dashboard — Setup Guide        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+PROJECT TITLE : Interactive Restaurant Analytics Dashboard with Geo Visualization
+TECH STACK    : Python · Streamlit · Pandas · Plotly · Folium · VADER Sentiment
+DATASET       : restaurants.csv  (Zomato Dataset — Kaggle)
+
+─────────────────────────────────────────────────────────────────────────────
+STEP 1 — PREREQUISITES
+─────────────────────────────────────────────────────────────────────────────
+• Python 3.9 or higher installed
+• pip (Python package manager)
+
+─────────────────────────────────────────────────────────────────────────────
+STEP 2 — PROJECT STRUCTURE
+─────────────────────────────────────────────────────────────────────────────
+Restaurant Dashboards/
+├── app.py               ← Main Streamlit dashboard (all code lives here)
+├── restaurants.csv      ← Zomato dataset
+├── requirements.txt     ← Python package dependencies
+└── HOW_TO_RUN.txt       ← This file
+
+─────────────────────────────────────────────────────────────────────────────
+STEP 3 — INSTALL DEPENDENCIES
+─────────────────────────────────────────────────────────────────────────────
+Open a terminal / command prompt and run:
+
+    pip install -r requirements.txt
+
+─────────────────────────────────────────────────────────────────────────────
+STEP 4 — RUN THE DASHBOARD
+─────────────────────────────────────────────────────────────────────────────
+From inside the "Restaurant Dashboards" folder, run:
+
+    streamlit run app.py
+
+Your browser will automatically open at:  http://localhost:8501
+
+─────────────────────────────────────────────────────────────────────────────
+DASHBOARD FEATURES
+─────────────────────────────────────────────────────────────────────────────
+
+📌 SIDEBAR FILTERS
+  ✔ Search restaurant by name
+  ✔ Filter by City (dropdown)
+  ✔ Filter by Cuisine (dropdown)
+  ✔ Filter by Restaurant Type (dropdown)
+  ✔ Rating range slider
+  ✔ Cost for Two range slider
+  ✔ Minimum votes filter
+  ✔ Online Delivery toggle
+  ✔ Table Booking toggle
+  ✔ Upload your own CSV dataset
+
+📊 KPI CARDS (auto-update with filters)
+  ✔ Total number of restaurants
+  ✔ Average rating
+  ✔ Most popular cuisine
+  ✔ Average cost for two
+  ✔ Online delivery percentage
+  ✔ Table booking percentage
+
+📈 VISUALIZATIONS (14 interactive charts)
+  ✔ Restaurants by City (bar chart)
+  ✔ Cuisine Popularity (donut pie chart)
+  ✔ Price Range Distribution (color-coded bar chart)
+  ✔ Rating Distribution (histogram + box plot)
+  ✔ Cost vs Rating Bubble Chart (bubble size = votes)
+  ✔ Average Cost for Two by City
+  ✔ Top 10 Highest Rated Restaurants (horizontal bar)
+  ✔ Average Rating by Cuisine
+  ✔ Restaurant Type Breakdown (donut chart)
+  ✔ Online Delivery & Table Booking Split (dual pie)
+  ✔ Distribution of Votes / Reviews (violin + histogram)
+  ✔ Rating Bands per City — stacked bar
+  ✔ Review Sentiment Analysis (Positive / Neutral / Negative)
+  ✔ Cuisine × City Heatmap (avg rating)
+
+🗺️ MAP VISUALIZATION
+  ✔ Interactive restaurant location map (Folium / Plotly mapbox)
+  ✔ Color-coded markers by rating
+  ✔ Bubble size proportional to votes
+  ✔ Hover tooltip with full restaurant details
+
+📋 DATA EXPLORER
+  ✔ Scrollable, color-gradient table of filtered data
+  ✔ Download filtered results as CSV
+
+─────────────────────────────────────────────────────────────────────────────
+ALGORITHM & TECHNIQUES USED
+─────────────────────────────────────────────────────────────────────────────
+• Data Cleaning       : Pandas — null handling, type coercion, normalization
+• Feature Engineering : Rating bands, Price tiers, Primary Cuisine extraction,
+                        Restaurant Type classification, Lat/Long generation
+• Sentiment Analysis  : Rating-based proxy (≥4.0 Positive, 3–3.9 Neutral, <3 Negative)
+• Visualization       : Plotly Express & Graph Objects (14 chart types)
+• Geo Visualization   : Folium CircleMarker / Plotly Scatter Mapbox
+• Caching             : Streamlit @st.cache_data for fast data reload
+
+─────────────────────────────────────────────────────────────────────────────
+NOTES
+─────────────────────────────────────────────────────────────────────────────
+• "Online Delivery", "Table Booking", and GPS coordinates are realistically
+  simulated from the dataset (original CSV does not include these columns).
+  When using a full Kaggle Zomato dataset with these columns, they will be
+  read directly.
+• Map shows a sample of up to 800 restaurants for performance.
+• All charts dynamically update based on sidebar filter selections.
+
+─────────────────────────────────────────────────────────────────────────────
