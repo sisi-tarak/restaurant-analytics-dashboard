@@ -4,7 +4,7 @@
 
 PROJECT TITLE : Interactive Restaurant Analytics Dashboard with Geo Visualization
 TECH STACK    : Python · Streamlit · Pandas · Plotly · Folium · VADER Sentiment
-DATASET       : restaurants.csv  (Zomato Dataset — Kaggle)
+DATASET       : restaurants.csv  (  Dataset — )
 
 ─────────────────────────────────────────────────────────────────────────────
 STEP 1 — PREREQUISITES
@@ -17,7 +17,7 @@ STEP 2 — PROJECT STRUCTURE
 ─────────────────────────────────────────────────────────────────────────────
 Restaurant Dashboards/
 ├── app.py               ← Main Streamlit dashboard (all code lives here)
-├── restaurants.csv      ← Zomato dataset
+├── restaurants.csv      ←   dataset
 ├── requirements.txt     ← Python package dependencies
 └── HOW_TO_RUN.txt       ← This file
 
@@ -103,7 +103,7 @@ NOTES
 ─────────────────────────────────────────────────────────────────────────────
 • "Online Delivery", "Table Booking", and GPS coordinates are realistically
   simulated from the dataset (original CSV does not include these columns).
-  When using a full Kaggle Zomato dataset with these columns, they will be
+  When using a full    dataset with these columns, they will be
   read directly.
 • Map shows a sample of up to 800 restaurants for performance.
 • All charts dynamically update based on sidebar filter selections.

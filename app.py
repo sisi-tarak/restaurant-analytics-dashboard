@@ -2,7 +2,7 @@
 Restaurant Analytics Dashboard  v3.0
 ======================================
 Tech Stack : Streamlit · Pandas · NumPy · Plotly
-Dataset    : Zomato Restaurant Dataset (Kaggle)
+Dataset    : Restaurant Dataset
 
 Features
 ---------
@@ -14,7 +14,7 @@ Features
 - Percentile ranking table
 - Sentiment analysis, Price elasticity
 - Geo map with color-coded markers
-- Full upload support for any Zomato-style CSV (up to 750 MB)
+- Full upload support for any CSV (up to 750 MB)
 - session_state–based upload (file_id key — zero re-reads on reruns)
 """
 
@@ -218,7 +218,7 @@ def landing_page():
             <div class="landing-card-icon">📦</div>
             <div class="landing-card-title">Use Default Dataset</div>
             <div class="landing-card-desc">
-                Start instantly with the bundled Zomato restaurant dataset.<br>
+                Start instantly with the bundled restaurant dataset.<br>
                 6,593 restaurants · 23 cities · India
             </div>
         </div>
@@ -235,7 +235,7 @@ def landing_page():
             <div class="landing-card-icon">📂</div>
             <div class="landing-card-title">Upload Your Own Dataset</div>
             <div class="landing-card-desc">
-                Upload any Zomato-style CSV file.<br>
+                Upload any CSV file.<br>
                 Required columns: Name, City, Cuisine, Rating, Votes, Cost
             </div>
         </div>
@@ -305,7 +305,7 @@ def landing_page():
                 margin-top:48px; padding-top:16px;
                 border-top:1px solid {t['border']};">
         Restaurant Analytics Dashboard &nbsp;·&nbsp;
-        Streamlit &nbsp;·&nbsp; Plotly &nbsp;·&nbsp; Zomato Dataset (Kaggle)
+        Streamlit &nbsp;·&nbsp; Plotly
     </div>""", unsafe_allow_html=True)
 
 
@@ -923,7 +923,7 @@ def sidebar(df: pd.DataFrame):
             st.session_state.col_info       = None
             st.rerun()
 
-        st.caption("Zomato Dataset  ·  Kaggle")
+        st.caption("Restaurant Dataset")
 
     return (uploaded, search, city, cuisine, r_type,
             rating_rng, cost_rng, min_votes, online_opt, table_opt)
@@ -1723,7 +1723,7 @@ def main():
     st.markdown("""
     <div class="footer-bar">
         Restaurant Analytics Dashboard &nbsp;·&nbsp;
-        Streamlit &nbsp;·&nbsp; Plotly &nbsp;·&nbsp; Zomato Dataset (Kaggle)
+        Streamlit &nbsp;·&nbsp; Plotly
     </div>""", unsafe_allow_html=True)
 
 
